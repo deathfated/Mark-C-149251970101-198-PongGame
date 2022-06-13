@@ -19,4 +19,9 @@ public class BoolController : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
         rig.velocity = speed;
     }
+
+    public void ActivatePUSpeedUp(float magnitude)
+    {
+        rig.velocity *= magnitude;
+    }
 }
