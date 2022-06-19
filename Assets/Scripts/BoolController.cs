@@ -8,6 +8,8 @@ public class BoolController : MonoBehaviour
     public Vector2 resetPosition;
 
     private Rigidbody2D rig;
+    private Vector2 container;
+    public float mag;
 
     public void ResetBall()
     {
@@ -22,6 +24,15 @@ public class BoolController : MonoBehaviour
 
     public void ActivatePUSpeedUp(float magnitude)
     {
+        //container = rig.velocity;
         rig.velocity *= magnitude;
+        Invoke("DeactivatePUSpeedUp", 5.0f);
+    }
+
+    public void DeactivatePUSpeedUp()
+    {
+        //rig.velocity = rig.velocity.normalized;
+        rig.velocity /= mag;
+        Debug.Log("Speed Up Deactivated");
     }
 }

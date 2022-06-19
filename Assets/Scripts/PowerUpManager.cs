@@ -41,8 +41,6 @@ public class PowerUpManager : MonoBehaviour
             GenerateRandomPowerUp();
             timer -= spawnInterval;
         }
-
-
     }
 
     public void GenerateRandomPowerUp() 
